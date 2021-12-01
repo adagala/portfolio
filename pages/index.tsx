@@ -19,7 +19,7 @@ export default function Home() {
             Henry Adagala
           </div>
           <div className="text-3xl font-medium m-3">
-            Software Engineer
+            Software Developer
           </div>
           <div className="m-5 flex space-x-4">
             <div>
