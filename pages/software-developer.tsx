@@ -11,7 +11,7 @@ const SoftwareDeveloper: NextPage = () => {
         <title>Software Developer Advert</title>
         <meta
           name="description"
-          content="Software Developer, Job Advert, Angular, Firebase"
+          content="Software Developer, Performance Management, Human Resource Management, Job Advert, Angular, Firebase"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -85,7 +85,9 @@ const SoftwareDeveloper: NextPage = () => {
             <div className="font-semibold text-xl uppercase mt-3 font-serif">
               Compensation
             </div>
-            <div>KES 50,000 (Subject to tasks allocation & completion)</div>
+            <div>
+              KES 50,000/month (Subject to tasks allocation & completion)
+            </div>
           </div>
           <div>
             <div className="font-semibold text-xl uppercase mt-3 font-serif">
