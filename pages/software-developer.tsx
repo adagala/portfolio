@@ -16,9 +16,9 @@ const SoftwareDeveloper: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center m-5">
         <div className="">
-          <div className="font-bold text-3xl underline mt-3 font-serif">
+          <div className="text-center font-bold text-3xl underline mt-3 font-serif">
             FULL STACK DEVELOPER
           </div>
           <div>
