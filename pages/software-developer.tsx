@@ -91,6 +91,14 @@ const SoftwareDeveloper: NextPage = () => {
           </div>
           <div>
             <div className="font-semibold text-xl uppercase mt-3 font-serif">
+              Deadline
+            </div>
+            <div>
+              April 28<sup>th</sup>, 2022
+            </div>
+          </div>
+          <div>
+            <div className="font-semibold text-xl uppercase mt-3 font-serif">
               Communication
             </div>
             <div>
