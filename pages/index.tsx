@@ -1,9 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ChevronRightIcon } from '@heroicons/react/solid';
+import { NextPage } from 'next/types';
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
-    <div >
+    <div>
       <Head>
         <title>Henry Adagala</title>
         <meta
@@ -15,39 +18,71 @@ export default function Home() {
 
       <main className="h-screen flex justify-center items-center bg-gray-100">
         <div className="flex flex-col justify-center items-center">
-          <div className="text-5xl font-bold">
-            Henry Adagala
-          </div>
-          <div className="text-3xl font-medium m-3">
-            Software Developer
-          </div>
+          <div className="text-5xl font-bold">Henry Adagala</div>
+          <div className="text-3xl font-medium m-3">Software Developer</div>
           <div className="m-5 flex space-x-4">
             <div>
-              <a href="https://linkedin.com/in/adagalahenry" target="_blank" rel="noopener noreferrer">
-                <Image src="/linkedin.svg" alt="Twitter" width={32} height={32} />
+              <a
+                href="https://linkedin.com/in/adagalahenry"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/linkedin.svg"
+                  alt="Twitter"
+                  width={32}
+                  height={32}
+                />
               </a>
             </div>
             <div>
-              <a className="" href="https://twitter.com/adagalahenry" target="_blank" rel="noopener noreferrer">
-                <Image src="/twitter.svg" alt="Twitter" width={32} height={32} />
+              <a
+                className=""
+                href="https://twitter.com/adagalahenry"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/twitter.svg"
+                  alt="Twitter"
+                  width={32}
+                  height={32}
+                />
               </a>
             </div>
-            <div >
-              <a href="https://github.com/adagala" target="_blank" rel="noopener noreferrer">
+            <div>
+              <a
+                href="https://github.com/adagala"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image src="/github.svg" alt="Twitter" width={32} height={32} />
               </a>
             </div>
-            <div >
-              <a href="mailto:adagalahenry@gmail.com" target="_blank" rel="noopener noreferrer">
+            <div>
+              <a
+                href="mailto:adagalahenry@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image src="/email.svg" alt="Mail" width={32} height={32} />
               </a>
             </div>
           </div>
+          <div className="flex items-center">
+            <Link href="/software-developer">
+              <a className="flex items-center cursor-pointer justify-center mt-4 hover:opacity-50">
+                Software Developer Advert
+                <ChevronRightIcon className="h-5 w-5"></ChevronRightIcon>
+              </a>
+            </Link>
+          </div>
         </div>
       </main>
 
-      <footer >
-      </footer>
+      <footer></footer>
     </div>
-  )
-}
+  );
+};
+
+export default Home;
