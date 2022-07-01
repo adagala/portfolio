@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
-import { ChevronRightIcon } from '@heroicons/react/solid';
 import { NextPage } from 'next/types';
 
 const Home: NextPage = () => {
@@ -68,14 +66,6 @@ const Home: NextPage = () => {
                 <Image src="/email.svg" alt="Mail" width={32} height={32} />
               </a>
             </div>
-          </div>
-          <div className="flex items-center">
-            <Link href="/software-developer">
-              <a className="flex items-center cursor-pointer justify-center mt-4 hover:opacity-50">
-                Software Developer Advert
-                <ChevronRightIcon className="h-5 w-5"></ChevronRightIcon>
-              </a>
-            </Link>
           </div>
         </div>
       </main>
