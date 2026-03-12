@@ -1,5 +1,7 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default (_: NextApiRequest, res: NextApiResponse) => {
-  res.status(200).json({ text: 'Hello' })
-}
+const handler = (_: NextApiRequest, res: NextApiResponse) => {
+  res.status(200).json({ text: 'Hello' });
+};
+
+export default handler;

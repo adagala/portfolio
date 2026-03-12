@@ -1,0 +1,10 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "true": true,
+    "/^node -v$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "npm install": true
+  }
+}

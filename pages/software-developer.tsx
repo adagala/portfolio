@@ -1,5 +1,8 @@
-import { ChevronLeftIcon } from '@heroicons/react/solid';
-import { MailIcon, ChatAltIcon } from '@heroicons/react/outline';
+import { ChevronLeftIcon } from '@heroicons/react/24/solid';
+import {
+  EnvelopeIcon,
+  ChatBubbleLeftRightIcon,
+} from '@heroicons/react/24/outline';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -110,10 +113,10 @@ const SoftwareDeveloper: NextPage = () => {
               <div className="hidden">
                 <a href="mailto:adagalahenry@gmail.com">
                   <div className="flex items-center hover:opacity-50">
-                    <MailIcon
+                    <EnvelopeIcon
                       className="flex-shrink-0 h-5 w-5"
                       aria-hidden="true"
-                    ></MailIcon>
+                    ></EnvelopeIcon>
                     <span className="ml-2">adagalahenry@gmail.com</span>
                   </div>
                 </a>
@@ -123,10 +126,10 @@ const SoftwareDeveloper: NextPage = () => {
                     target="_blank"
                     className="flex items-center hover:opacity-50"
                   >
-                    <ChatAltIcon
+                    <ChatBubbleLeftRightIcon
                       className="flex-shrink-0 h-5 w-5"
                       aria-hidden="true"
-                    ></ChatAltIcon>
+                    ></ChatBubbleLeftRightIcon>
                     <span className="ml-2">
                       twitter.com/adagalahenry (Direct Message Only)
                     </span>
@@ -137,14 +140,15 @@ const SoftwareDeveloper: NextPage = () => {
           </div>
           <div>
             <div className="">
-              <Link href="/">
-                <a className="flex items-center cursor-pointer justify-center mt-4 hover:opacity-50">
-                  <ChevronLeftIcon
-                    className="flex-shrink-0 h-5 w-5"
-                    aria-hidden="true"
-                  ></ChevronLeftIcon>
-                  <span className="ml-2">Back Home</span>
-                </a>
+              <Link
+                href="/"
+                className="flex items-center cursor-pointer justify-center mt-4 hover:opacity-50"
+              >
+                <ChevronLeftIcon
+                  className="flex-shrink-0 h-5 w-5"
+                  aria-hidden="true"
+                ></ChevronLeftIcon>
+                <span className="ml-2">Back Home</span>
               </Link>
             </div>
           </div>

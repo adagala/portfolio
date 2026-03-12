@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { NextPage } from 'next/types';
+import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
