@@ -102,7 +102,7 @@ const Home: NextPage = () => (
       .skill-bars i{transform-origin:left;animation:skill-grow 1.2s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 15% cover 30%}
       @keyframes skill-grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
       @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
-@media(max-width:700px){.top{padding:0 6vw}nav{display:none}.menu{display:block}.hero{padding:55px 7vw 80px;min-height:680px}.hero-copy{margin-top:75px}.hero-art{opacity:.48;width:100%;right:-30%;height:45%;bottom:0}.quick-links,.numbers,.about{display:block}.quick-links a{display:block;border:0!important;border-bottom:1px solid #d6cfc5}.works,.process,.services,.blog{padding:75px 7vw}.work-card{margin-top:60px}.work-art{height:330px}.work-copy{display:block}.work-copy>*{margin:14px 0}.steps,.posts{grid-template-columns:1fr}.numbers{padding:75px 7vw}.stats{margin-top:20px}.about-art{height:500px}.about>div:last-child{padding:75px 7vw}.service-grid{grid-template-columns:1fr}.quote{padding:75px 8%}.footer-bottom{margin-top:80px;gap:15px;flex-direction:column}}`}
+@media(max-width:700px){.top{padding:0 6vw}nav{display:none}.menu{display:block}.hero{padding:55px 7vw 80px;min-height:680px}.hero-copy{margin-top:75px}.hero-art{opacity:.48;width:100%;right:-30%;height:45%;bottom:0}.quick-links,.numbers,.about{display:block}.quick-links a{display:block;border:0!important;border-bottom:1px solid #d6cfc5}.works,.process,.services,.blog{padding:75px 7vw}.work-card{margin-top:60px}.work-art{height:330px}.work-copy{display:block}.work-copy>*{margin:14px 0}.steps,.posts{grid-template-columns:1fr}.numbers{padding:75px 7vw}.stats{margin-top:20px}.about-art{height:500px}.about>div:last-child{padding:75px 7vw}.service-grid{grid-template-columns:1fr}.quote{padding:75px 8%}.footer-bottom{margin-top:80px;gap:15px;flex-direction:column}}
       /* Faithful published Framer home treatment. */
       body{background:#e7e6ff}
       .top{position:absolute;top:20px;left:8.7vw;right:8.7vw;width:auto;height:76px;padding:0 28px;border:1px solid #272727;border-radius:21px;background:#fff;z-index:5;animation:none}
@@ -139,7 +139,7 @@ const Home: NextPage = () => (
       .work-copy h3{font:500 32px Arial,sans-serif}.work-copy a{border:1px solid #2a2a2a;border-radius:999px;padding:12px 17px}
       @media(max-width:700px){.top{left:20px;right:20px}.hero{min-height:650px;padding:110px 24px 70px}.hero-copy h1{font-size:56px}.hero-copy h1 img{width:68px;height:68px;margin:0 3px 8px}.hero-copy .lede{font-size:19px}.quick-links{display:block;padding:0 20px 50px}.quick-links a,.quick-links a:nth-child(3){min-height:0;margin-bottom:16px;padding:42px 20px}.work-art{height:330px}.work-copy{display:block}.work-copy a{display:inline-block;margin-top:14px}}
 
-    </style>
+    `}</style>
   </>
 );
 
