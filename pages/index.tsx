@@ -25,15 +25,10 @@ const Home: NextPage = () => (
       </header>
 
       <section className="hero" id="top">
-        <div className="socials"><a href="#">𝕏</a><a href="#">◌</a><a href="#">◎</a></div>
         <div className="hero-copy">
-          <p className="kicker">Hello!</p>
-          <h1>I&apos;m <em>Meeko,</em><br />a product designer.</h1>
-          <p className="lede">I specialize in <b>HTML</b>, <b>CSS</b>, <b>WordPress</b>, and <b>Framer</b>, with a strong track record of converting designs into responsive websites.</p>
-          <div className="tags"><span>Web Development</span><span>No-code Design</span></div>
+          <h1><span>Hello!</span><img src="https://framerusercontent.com/images/4MgLX6wnqVdlws8UZLo3hd8Zo.jpg?scale-down-to=1024&width=1120&height=1120" alt="" /> I&apos;m Meeko,<br />a product designer.</h1>
+          <p className="lede">I specialize in HTML, CSS, WordPress, and Framer, with a strong track record of converting designs into responsive websites.</p>
         </div>
-        <div className="hero-art" aria-hidden="true"><div className="sun"/><div className="shape one"/><div className="shape two"/><div className="shape three"/></div>
-        <a className="scroll" href="#work">Scroll to explore <i>↓</i></a>
       </section>
 
       <section className="quick-links">
@@ -107,7 +102,44 @@ const Home: NextPage = () => (
       .skill-bars i{transform-origin:left;animation:skill-grow 1.2s cubic-bezier(.2,.7,.2,1) both;animation-timeline:view();animation-range:entry 15% cover 30%}
       @keyframes skill-grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
       @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
-@media(max-width:700px){.top{padding:0 6vw}nav{display:none}.menu{display:block}.hero{padding:55px 7vw 80px;min-height:680px}.hero-copy{margin-top:75px}.hero-art{opacity:.48;width:100%;right:-30%;height:45%;bottom:0}.quick-links,.numbers,.about{display:block}.quick-links a{display:block;border:0!important;border-bottom:1px solid #d6cfc5}.works,.process,.services,.blog{padding:75px 7vw}.work-card{margin-top:60px}.work-art{height:330px}.work-copy{display:block}.work-copy>*{margin:14px 0}.steps,.posts{grid-template-columns:1fr}.numbers{padding:75px 7vw}.stats{margin-top:20px}.about-art{height:500px}.about>div:last-child{padding:75px 7vw}.service-grid{grid-template-columns:1fr}.quote{padding:75px 8%}.footer-bottom{margin-top:80px;gap:15px;flex-direction:column}}`}</style>
+@media(max-width:700px){.top{padding:0 6vw}nav{display:none}.menu{display:block}.hero{padding:55px 7vw 80px;min-height:680px}.hero-copy{margin-top:75px}.hero-art{opacity:.48;width:100%;right:-30%;height:45%;bottom:0}.quick-links,.numbers,.about{display:block}.quick-links a{display:block;border:0!important;border-bottom:1px solid #d6cfc5}.works,.process,.services,.blog{padding:75px 7vw}.work-card{margin-top:60px}.work-art{height:330px}.work-copy{display:block}.work-copy>*{margin:14px 0}.steps,.posts{grid-template-columns:1fr}.numbers{padding:75px 7vw}.stats{margin-top:20px}.about-art{height:500px}.about>div:last-child{padding:75px 7vw}.service-grid{grid-template-columns:1fr}.quote{padding:75px 8%}.footer-bottom{margin-top:80px;gap:15px;flex-direction:column}}`}
+      /* Faithful published Framer home treatment. */
+      body{background:#e7e6ff}
+      .top{position:absolute;top:20px;left:8.7vw;right:8.7vw;width:auto;height:76px;padding:0 28px;border:1px solid #272727;border-radius:21px;background:#fff;z-index:5;animation:none}
+      .logo{font:500 30px/1 Arial,sans-serif;letter-spacing:-1.8px}
+      .logo span{display:none}
+      .top nav{display:none}.menu{display:block;font-size:0;width:39px;height:39px;border:1px solid #272727;border-radius:12px;position:relative}
+      .menu:after{content:'☰';font-size:21px;position:absolute;inset:7px}
+      .hero{min-height:750px;padding:0 8vw;background:#e7e6ff;display:grid;place-items:center}
+      .socials,.tags,.hero-art,.scroll{display:none}
+      .hero-copy{max-width:900px;margin:70px auto 0;text-align:center;position:relative}
+      .hero-copy h1{font:500 clamp(55px,6.8vw,98px)/1.02 Arial,sans-serif;letter-spacing:-.075em;margin:0}
+      .hero-copy h1 span{display:inline}
+      .hero-copy h1 em{font:inherit}
+      .hero-copy h1 img{display:inline-block;width:104px;height:104px;border-radius:50%;object-fit:cover;vertical-align:middle;margin:0 9px 12px;border:1px solid #282826}
+      .hero-copy .lede{font:400 24px/1.45 Arial,sans-serif;letter-spacing:-.035em;max-width:730px;margin:41px auto 0}
+      .quick-links{background:#e7e6ff;grid-template-columns:1fr 1fr;gap:28px;padding:0 8.7vw 76px}
+      .quick-links a,.quick-links a:first-child{min-height:310px;background:#fff;border:1px solid #393939;border-radius:22px;padding:56px 35px;text-align:center}
+      .quick-links a:nth-child(3){grid-column:1/-1;min-height:240px}
+      .quick-links a small{display:none}.quick-links h3{font:500 26px/1.1 Arial,sans-serif;letter-spacing:-.05em;margin:38px 0 10px}
+      .quick-links p{font-size:18px;max-width:430px;margin:0 auto;line-height:1.45}
+      .quick-links b{position:static;display:grid;place-items:center;width:46px;height:40px;border:1px solid #2c2c2c;border-radius:999px;margin:26px auto 0;font-size:24px;background:#d9f3ff}
+      .quick-links a:nth-child(2) b{background:#ffe9a8}.quick-links a:nth-child(3) b{background:#d4f5eb}
+      .works{background:#fff;padding:105px 8.7vw}
+      .works .section-head,.services .section-head,.blog .section-head{margin:auto;text-align:center}
+      .section-head h2{font:500 clamp(37px,4.2vw,62px)/1.08 Arial,sans-serif;letter-spacing:-.06em}
+      .work-card{max-width:1120px;margin:100px auto 0}
+      .work-art{height:620px;border-radius:24px;background-size:cover!important;background-position:center!important}
+      .work-art.peach{background-image:url('https://framerusercontent.com/images/71Y2D4TN9lwdioEm0OdjvmqGyM.jpg?width=1200&height=880')!important}
+      .work-art.blue{background-image:url('https://framerusercontent.com/images/trsXJBZFYnylZe9mq4MZuw7Hl1k.jpg?width=1200&height=880')!important}
+      .work-art.lilac{background-image:url('https://framerusercontent.com/images/C294xloIIol0AEUqONIkBJSQdo.jpg?width=1200&height=880')!important}
+      .work-art.yellow{background-image:url('https://framerusercontent.com/images/6s9xilQTkcAOAiPCjmRX1Kzx8.jpg?width=1200&height=880')!important}
+      .work-art>span,.poster{display:none}
+      .work-copy{grid-template-columns:1fr auto;align-items:start;padding:20px 10px}.work-copy p,.work-copy span{display:none}
+      .work-copy h3{font:500 32px Arial,sans-serif}.work-copy a{border:1px solid #2a2a2a;border-radius:999px;padding:12px 17px}
+      @media(max-width:700px){.top{left:20px;right:20px}.hero{min-height:650px;padding:110px 24px 70px}.hero-copy h1{font-size:56px}.hero-copy h1 img{width:68px;height:68px;margin:0 3px 8px}.hero-copy .lede{font-size:19px}.quick-links{display:block;padding:0 20px 50px}.quick-links a,.quick-links a:nth-child(3){min-height:0;margin-bottom:16px;padding:42px 20px}.work-art{height:330px}.work-copy{display:block}.work-copy a{display:inline-block;margin-top:14px}}
+
+    </style>
   </>
 );
 
