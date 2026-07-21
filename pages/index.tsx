@@ -26,7 +26,7 @@ const Home: NextPage = () => (
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <h1><span>Hello!</span><img src="https://framerusercontent.com/images/4MgLX6wnqVdlws8UZLo3hd8Zo.jpg?scale-down-to=1024&width=1120&height=1120" alt="" /> I&apos;m Meeko,<br />a product designer.</h1>
+          <h1><span>Hello!</span><img src="https://framerusercontent.com/images/YgVvRjIwa5t5l7ct3d1mQK8hI.jpg?lossless=1&width=210&height=210" alt="" /> I&apos;m Meeko,<br />a product designer.</h1>
           <p className="lede">I specialize in HTML, CSS, WordPress, and Framer, with a strong track record of converting designs into responsive websites.</p>
         </div>
       </section>
@@ -112,7 +112,7 @@ const Home: NextPage = () => (
       .menu:after{content:'☰';font-size:21px;position:absolute;inset:7px}
       .hero{min-height:750px;padding:0 8vw;background:#e7e6ff;display:grid;place-items:center}
       .socials,.tags,.hero-art,.scroll{display:none}
-      .hero-copy{max-width:900px;margin:70px auto 0;text-align:center;position:relative}
+      .hero-copy{max-width:900px;margin:25px auto 0;text-align:center;position:relative}
       .hero-copy h1{font:500 clamp(55px,6.8vw,98px)/1.02 Arial,sans-serif;letter-spacing:-.075em;margin:0}
       .hero-copy h1 span{display:inline}
       .hero-copy h1 em{font:inherit}
@@ -129,10 +129,10 @@ const Home: NextPage = () => (
       .works .section-head,.services .section-head,.blog .section-head{margin:auto;text-align:center}
       .section-head h2{font:500 clamp(37px,4.2vw,62px)/1.08 Arial,sans-serif;letter-spacing:-.06em}
       .work-card{max-width:1120px;margin:100px auto 0}
-      .work-art{height:620px;border-radius:24px;background-size:cover!important;background-position:center!important}
-      .work-art.peach{background-image:url('https://framerusercontent.com/images/71Y2D4TN9lwdioEm0OdjvmqGyM.jpg?width=1200&height=880')!important}
-      .work-art.blue{background-image:url('https://framerusercontent.com/images/trsXJBZFYnylZe9mq4MZuw7Hl1k.jpg?width=1200&height=880')!important}
-      .work-art.lilac{background-image:url('https://framerusercontent.com/images/C294xloIIol0AEUqONIkBJSQdo.jpg?width=1200&height=880')!important}
+      .work-art{height:763px;border-radius:24px;background-size:cover!important;background-position:center!important}
+      .work-art.peach{background-image:url('https://framerusercontent.com/images/trsXJBZFYnylZe9mq4MZuw7Hl1k.jpg?width=1200&height=880')!important}
+      .work-art.blue{background-image:url('https://framerusercontent.com/images/C294xloIIol0AEUqONIkBJSQdo.jpg?width=1200&height=880')!important}
+      .work-art.lilac{background-image:url('https://framerusercontent.com/images/71Y2D4TN9lwdioEm0OdjvmqGyM.jpg?width=1200&height=880')!important}
       .work-art.yellow{background-image:url('https://framerusercontent.com/images/6s9xilQTkcAOAiPCjmRX1Kzx8.jpg?width=1200&height=880')!important}
       .work-art>span,.poster{display:none}
       .work-copy{grid-template-columns:1fr auto;align-items:start;padding:20px 10px}.work-copy p,.work-copy span{display:none}
