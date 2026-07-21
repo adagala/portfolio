@@ -19,7 +19,7 @@ const Home: NextPage = () => (
     </Head>
     <main>
       <header className="top">
-        <a className="logo" href="#top">meeko<span>.</span></a>
+        <a className="logo" href="#top">Meeko</a>
         <nav><a href="#work">Work</a><a href="#about">About</a><a href="#blog">Blog</a><a href="#contact">Contact</a></nav>
         <button className="menu" aria-label="Open menu">☰</button>
       </header>
@@ -32,7 +32,7 @@ const Home: NextPage = () => (
       </section>
 
       <section className="quick-links">
-        {[['My Portfolio','Explore selected projects and my approach to design.','#work'],['About Me','A closer look at my background, skills, and creative journey.','#about'],['Contact Me','Let’s work together to bring your ideas and vision to life.','#contact']].map(([title,text,href],i) => <a href={href} key={title}><small>0{i + 1}</small><h3>{title}</h3><p>{text}</p><b>↗</b></a>)}
+        {[['My Portfolio','Explore selected projects and my approach to design.','#work'],['About Me','A closer look at my background, skills, and creative journey.','#about'],['Contact Me','Let’s work together to bring your ideas and vision to life.','#contact']].map(([title,text,href],i) => <a href={href} key={title}><i className={'card-icon icon-' + i} aria-hidden="true">{i === 0 ? '▧' : i === 1 ? '☷' : '✉'}</i><small>0{i + 1}</small><h3>{title}</h3><p>{text}</p><b>→</b></a>)}
       </section>
 
       <section className="works" id="work">
@@ -138,6 +138,16 @@ const Home: NextPage = () => (
       .work-copy{grid-template-columns:1fr auto;align-items:start;padding:20px 10px}.work-copy p,.work-copy span{display:none}
       .work-copy h3{font:500 32px Arial,sans-serif}.work-copy a{border:1px solid #2a2a2a;border-radius:999px;padding:12px 17px}
       @media(max-width:700px){.top{left:20px;right:20px}.hero{min-height:650px;padding:110px 24px 70px}.hero-copy h1{font-size:56px}.hero-copy h1 img{width:68px;height:68px;margin:0 3px 8px}.hero-copy .lede{font-size:19px}.quick-links{display:block;padding:0 20px 50px}.quick-links a,.quick-links a:nth-child(3){min-height:0;margin-bottom:16px;padding:42px 20px}.work-art{height:330px}.work-copy{display:block}.work-copy a{display:inline-block;margin-top:14px}}
+
+
+      .quick-links .card-icon{display:grid;place-items:center;margin:0 auto 31px;font-style:normal;font-size:53px;line-height:1;height:62px;color:#282826}
+      .quick-links .icon-1{font-size:48px;transform:rotate(-8deg)}
+      .quick-links .icon-2{font-size:47px}
+      .quick-links h3{margin:0 0 10px}
+      .quick-links a:nth-child(3) .card-icon{margin-bottom:19px}
+      .quick-links a:nth-child(3) h3{margin-top:0}
+      .quick-links a:hover .card-icon{transform:translateY(-5px) rotate(3deg)}
+      .quick-links .card-icon{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 
     `}</style>
   </>
