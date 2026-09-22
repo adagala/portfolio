@@ -4,20 +4,31 @@ import { useEffect, useRef, useState } from 'react';
 
 const projects = [
   {
-    name: 'tmbwa',
-    description: 'TypeScript · source on GitHub.',
-    href: 'https://github.com/adagala/tmbwa',
-  },
-  {
-    name: 'exchangerateskenya',
+    name: 'Onima Media',
     description:
-      'Daily exchange rates for popular currencies against the Kenyan shilling.',
-    href: 'https://github.com/adagala/exchangerateskenya',
+      'Music distribution and publishing platform for independent artists and labels.',
+    href: 'https://dashboard.onima.co',
   },
   {
-    name: 'molf',
-    description: 'TypeScript · source on GitHub.',
-    href: 'https://github.com/adagala/molf',
+    name: 'RemoteMore Marketplace',
+    description: 'Marketplace connecting remote tech talent with companies.',
+    href: 'https://app.remotemore.com',
+  },
+  {
+    name: 'Smart Apartment Data',
+    description: 'Property management platform.',
+    href: 'https://smartapartmentdata.com/',
+  },
+  {
+    name: 'Delsco Kenya',
+    description: 'Human Resource management platform.',
+    href: '#',
+  },
+  {
+    name: 'The Kenya Health Informatics Association (KeHIA)',
+    description:
+      'Online membership and resource platform for health informatics professionals in Kenya.',
+    href: 'https://kehia.org',
   },
 ];
 
@@ -82,13 +93,23 @@ const skills = [
   'Tailwind',
   'Firebase',
   'Git',
+  'Express.js',
 ];
 
 const contacts = [
-  { label: 'linkedin.com/in/adagalahenry', href: 'https://linkedin.com/in/adagalahenry' },
+  {
+    label: 'linkedin.com/in/adagalahenry',
+    href: 'https://linkedin.com/in/adagalahenry',
+  },
   { label: 'github.com/adagala', href: 'https://github.com/adagala' },
-  { label: 'twitter.com/adagalahenry', href: 'https://twitter.com/adagalahenry' },
-  { label: 'mailto:adagalahenry@gmail.com', href: 'mailto:adagalahenry@gmail.com' },
+  {
+    label: 'twitter.com/adagalahenry',
+    href: 'https://twitter.com/adagalahenry',
+  },
+  {
+    label: 'mailto:adagalahenry@gmail.com',
+    href: 'mailto:adagalahenry@gmail.com',
+  },
 ];
 
 const menuSections = [
@@ -238,26 +259,28 @@ const Home: NextPage = () => {
               </p>
             </section>
 
-            <section id="projects" className="my-8 scroll-mt-6">
-              <CommandHeading id="projects" command="ls ~/projects --sort=recent" />
-              <ul className="mt-3 border-l-2 border-gray-800 pl-5">
-                {projects.map((project) => (
-                  <li key={project.name} className="mb-4 last:mb-0">
-                    <a
-                      href={project.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-bold text-blue-400 hover:text-blue-300"
-                    >
-                      <span className="text-green-400">▸ </span>
-                      {project.name}
-                    </a>
-                    <p className="ml-4 mt-1 max-w-lg text-xs leading-relaxed text-gray-400">
-                      {project.description}
-                    </p>
-                  </li>
+            <section id="contact" className="mt-8 scroll-mt-6">
+              <div className="flex items-center gap-2">
+                <CommandHeading id="contact" command="contact --list" />
+                <span
+                  className="inline-block h-4 w-2 animate-pulse bg-green-400 align-middle"
+                  aria-hidden="true"
+                />
+              </div>
+              <div className="mt-3 flex flex-col gap-2">
+                {contacts.map((contact) => (
+                  <a
+                    key={contact.href}
+                    href={contact.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-gray-200 hover:text-green-400"
+                  >
+                    <span className="text-gray-500">$ open </span>
+                    {contact.label}
+                  </a>
                 ))}
-              </ul>
+              </div>
             </section>
 
             <section id="sites" className="my-8 scroll-mt-6">
@@ -282,6 +305,31 @@ const Home: NextPage = () => {
               </ul>
             </section>
 
+            <section id="projects" className="my-8 scroll-mt-6">
+              <CommandHeading
+                id="projects"
+                command="ls ~/projects --sort=recent"
+              />
+              <ul className="mt-3 border-l-2 border-gray-800 pl-5">
+                {projects.map((project) => (
+                  <li key={project.name} className="mb-4 last:mb-0">
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-bold text-blue-400 hover:text-blue-300"
+                    >
+                      <span className="text-green-400">▸ </span>
+                      {project.name}
+                    </a>
+                    <p className="ml-4 mt-1 max-w-lg text-xs leading-relaxed text-gray-400">
+                      {project.description}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
             <section id="skills" className="my-8 scroll-mt-6">
               <CommandHeading id="skills" command="cat skills.json" />
               <div className="mt-3 flex flex-wrap gap-2">
@@ -292,30 +340,6 @@ const Home: NextPage = () => {
                   >
                     {skill}
                   </span>
-                ))}
-              </div>
-            </section>
-
-            <section id="contact" className="mt-8 scroll-mt-6">
-              <div className="flex items-center gap-2">
-                <CommandHeading id="contact" command="contact --list" />
-                <span
-                  className="inline-block h-4 w-2 animate-pulse bg-green-400 align-middle"
-                  aria-hidden="true"
-                />
-              </div>
-              <div className="mt-3 flex flex-col gap-2">
-                {contacts.map((contact) => (
-                  <a
-                    key={contact.href}
-                    href={contact.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-gray-200 hover:text-green-400"
-                  >
-                    <span className="text-gray-500">$ open </span>
-                    {contact.label}
-                  </a>
                 ))}
               </div>
             </section>
