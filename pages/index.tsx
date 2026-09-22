@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import type { NextPage } from 'next';
+import { useEffect, useRef, useState } from 'react';
 
 const projects = [
   {
@@ -72,7 +73,12 @@ const skills = [
   'TypeScript',
   'React',
   'Next.js',
+  'NestJS',
   'Node.js',
+  'PostgreSQL',
+  'Docker',
+  'GCP',
+  'AI',
   'Tailwind',
   'Firebase',
   'Git',
@@ -84,6 +90,103 @@ const contacts = [
   { label: 'twitter.com/adagalahenry', href: 'https://twitter.com/adagalahenry' },
   { label: 'mailto:adagalahenry@gmail.com', href: 'mailto:adagalahenry@gmail.com' },
 ];
+
+const menuSections = [
+  { id: 'about', label: 'about' },
+  { id: 'projects', label: 'projects' },
+  { id: 'sites', label: 'sites' },
+  { id: 'skills', label: 'skills' },
+  { id: 'contact', label: 'contact' },
+];
+
+const menuItemDelays = [
+  'delay-[40ms]',
+  'delay-[70ms]',
+  'delay-[100ms]',
+  'delay-[130ms]',
+  'delay-[160ms]',
+];
+
+const FloatingSectionMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handlePointerDown = (event: MouseEvent) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsOpen(false);
+    };
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="fixed bottom-5 right-5 z-50 sm:bottom-6 sm:right-6"
+    >
+      <div
+        role="menu"
+        aria-hidden={!isOpen}
+        className={`absolute bottom-16 right-0 w-48 origin-bottom-right rounded-xl border border-gray-800 bg-gray-900 p-2 font-mono shadow-2xl transition-all ${
+          isOpen
+            ? 'translate-y-0 scale-100 opacity-100 duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]'
+            : 'pointer-events-none translate-y-2 scale-95 opacity-0 duration-150 ease-in'
+        }`}
+      >
+        {menuSections.map((section, i) => (
+          <a
+            key={section.id}
+            href={`#${section.id}`}
+            role="menuitem"
+            onClick={() => setIsOpen(false)}
+            className={`block rounded-md px-2 py-1.5 text-xs text-gray-200 transition-all hover:bg-gray-800 hover:text-green-400 ${
+              isOpen
+                ? `translate-y-0 opacity-100 duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${menuItemDelays[i]}`
+                : 'translate-y-1 opacity-0 duration-100 ease-in delay-0'
+            }`}
+          >
+            <span className="text-green-400">$</span> goto {section.label}
+          </a>
+        ))}
+      </div>
+
+      <button
+        type="button"
+        onClick={() => setIsOpen((open) => !open)}
+        aria-expanded={isOpen}
+        aria-label="Open section menu"
+        className="flex h-12 w-12 items-center justify-center rounded-xl border border-teal-400 bg-gray-900 font-mono text-sm font-bold text-teal-400 shadow-2xl transition-transform hover:-translate-y-0.5 active:scale-90"
+      >
+        &gt;_
+      </button>
+    </div>
+  );
+};
+
+const CommandHeading = ({ id, command }: { id: string; command: string }) => (
+  <a href={`#${id}`} className="group flex w-fit items-center gap-2 text-sm">
+    <span className="text-green-400">$</span>
+    <span className="text-gray-200 group-hover:underline">{command}</span>
+    <span className="text-gray-600 opacity-0 transition-opacity group-hover:opacity-100">
+      #
+    </span>
+  </a>
+);
 
 const Home: NextPage = () => {
   return (
@@ -125,11 +228,8 @@ const Home: NextPage = () => {
               </p>
             </div>
 
-            <section className="my-8">
-              <p className="text-sm">
-                <span className="text-green-400">$</span>{' '}
-                <span className="text-gray-200">cat about.md</span>
-              </p>
+            <section id="about" className="my-8 scroll-mt-6">
+              <CommandHeading id="about" command="cat about.md" />
               <p className="mt-2 text-xs text-gray-500"># a short bio</p>
               <p className="mt-2 max-w-xl text-sm leading-relaxed text-gray-300">
                 Building web products end-to-end, front to back, with a soft
@@ -138,11 +238,8 @@ const Home: NextPage = () => {
               </p>
             </section>
 
-            <section className="my-8">
-              <p className="text-sm">
-                <span className="text-green-400">$</span>{' '}
-                <span className="text-gray-200">ls ~/projects --sort=recent</span>
-              </p>
+            <section id="projects" className="my-8 scroll-mt-6">
+              <CommandHeading id="projects" command="ls ~/projects --sort=recent" />
               <ul className="mt-3 border-l-2 border-gray-800 pl-5">
                 {projects.map((project) => (
                   <li key={project.name} className="mb-4 last:mb-0">
@@ -163,11 +260,8 @@ const Home: NextPage = () => {
               </ul>
             </section>
 
-            <section className="my-8">
-              <p className="text-sm">
-                <span className="text-green-400">$</span>{' '}
-                <span className="text-gray-200">open ~/sites --live</span>
-              </p>
+            <section id="sites" className="my-8 scroll-mt-6">
+              <CommandHeading id="sites" command="open ~/sites --live" />
               <ul className="mt-3 grid grid-cols-1 gap-x-10 border-l-2 border-gray-800 pl-5 lg:grid-cols-2">
                 {liveSites.map((site) => (
                   <li key={site.name} className="mb-4 last:mb-0">
@@ -188,11 +282,8 @@ const Home: NextPage = () => {
               </ul>
             </section>
 
-            <section className="my-8">
-              <p className="text-sm">
-                <span className="text-green-400">$</span>{' '}
-                <span className="text-gray-200">cat skills.json</span>
-              </p>
+            <section id="skills" className="my-8 scroll-mt-6">
+              <CommandHeading id="skills" command="cat skills.json" />
               <div className="mt-3 flex flex-wrap gap-2">
                 {skills.map((skill) => (
                   <span
@@ -205,15 +296,14 @@ const Home: NextPage = () => {
               </div>
             </section>
 
-            <section className="mt-8">
-              <p className="text-sm">
-                <span className="text-green-400">$</span>{' '}
-                <span className="text-gray-200">contact --list</span>{' '}
+            <section id="contact" className="mt-8 scroll-mt-6">
+              <div className="flex items-center gap-2">
+                <CommandHeading id="contact" command="contact --list" />
                 <span
                   className="inline-block h-4 w-2 animate-pulse bg-green-400 align-middle"
                   aria-hidden="true"
                 />
-              </p>
+              </div>
               <div className="mt-3 flex flex-col gap-2">
                 {contacts.map((contact) => (
                   <a
@@ -232,6 +322,8 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
+
+      <FloatingSectionMenu />
 
       <footer></footer>
     </div>
