@@ -18,7 +18,11 @@ package-lock.json
 
 # misc
 .DS_Store
+
+# design exploration scratch files (not shipped)
+/design-explorations
 *.pem
+*.tsbuildinfo
 
 # debug
 npm-debug.log*
