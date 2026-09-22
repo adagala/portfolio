@@ -4,6 +4,18 @@ import { useEffect, useRef, useState } from 'react';
 
 const projects = [
   {
+    name: 'The Kenya Health Informatics Association (KeHIA)',
+    description:
+      'Online membership and resource platform for health informatics professionals in Kenya.',
+    href: 'https://kehia.org',
+  },
+  {
+    name: 'The MidBar Welfare Association (TMBWA)',
+    description:
+      'Member portal and mutual-support community for the MidBar Welfare Association.',
+    href: 'https://app.themidbarwelfareassociation.co.ke',
+  },
+  {
     name: 'RemoteMore Marketplace',
     description: 'Marketplace connecting remote tech talent with companies.',
     href: 'https://app.remotemore.com',
@@ -15,10 +27,9 @@ const projects = [
     href: 'https://dashboard.onima.co',
   },
   {
-    name: 'The MidBar Welfare Association (TMBWA)',
-    description:
-      'Member portal and mutual-support community for the MidBar Welfare Association.',
-    href: 'https://app.themidbarwelfareassociation.co.ke',
+    name: 'acelr8',
+    description: 'Startup human resource management platform.',
+    href: '#',
   },
   {
     name: 'Smart Apartment Data',
@@ -28,17 +39,6 @@ const projects = [
   {
     name: 'Delsco Kenya',
     description: 'Human Resource management platform.',
-    href: '#',
-  },
-  {
-    name: 'The Kenya Health Informatics Association (KeHIA)',
-    description:
-      'Online membership and resource platform for health informatics professionals in Kenya.',
-    href: 'https://kehia.org',
-  },
-  {
-    name: 'acelr8',
-    description: 'Startup human resource management platform.',
     href: '#',
   },
 ];
@@ -253,7 +253,7 @@ const Home: NextPage = () => {
                 Henry Adagala
               </h1>
               <p className="mt-1 text-sm text-green-400">
-                Full-stack developer · TypeScript
+                Full-stack developer
               </p>
               <p className="mt-1 text-xs text-gray-500">
                 Nairobi, Kenya · @RemoteMore
