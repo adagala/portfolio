@@ -4,15 +4,21 @@ import { useEffect, useRef, useState } from 'react';
 
 const projects = [
   {
+    name: 'RemoteMore Marketplace',
+    description: 'Marketplace connecting remote tech talent with companies.',
+    href: 'https://app.remotemore.com',
+  },
+  {
     name: 'Onima Media',
     description:
       'Music distribution and publishing platform for independent artists and labels.',
     href: 'https://dashboard.onima.co',
   },
   {
-    name: 'RemoteMore Marketplace',
-    description: 'Marketplace connecting remote tech talent with companies.',
-    href: 'https://app.remotemore.com',
+    name: 'The MidBar Welfare Association (TMBWA)',
+    description:
+      'Member portal and mutual-support community for the MidBar Welfare Association.',
+    href: 'https://app.themidbarwelfareassociation.co.ke',
   },
   {
     name: 'Smart Apartment Data',
@@ -29,6 +35,11 @@ const projects = [
     description:
       'Online membership and resource platform for health informatics professionals in Kenya.',
     href: 'https://kehia.org',
+  },
+  {
+    name: 'acelr8',
+    description: 'Startup human resource management platform.',
+    href: '#',
   },
 ];
 
