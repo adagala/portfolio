@@ -118,7 +118,7 @@ const contacts = [
     href: 'https://twitter.com/adagalahenry',
   },
   {
-    label: 'mailto:adagalahenry@gmail.com',
+    label: 'adagalahenry@gmail.com',
     href: 'mailto:adagalahenry@gmail.com',
   },
 ];
