@@ -3,7 +3,7 @@ import Head from 'next/head';
 const SITE_NAME = 'Henry Adagala';
 const DEFAULT_DESCRIPTION =
   'Henry Adagala is a full-stack software developer in Nairobi, Kenya, building web products with TypeScript, React and Next.js.';
-const SOCIAL_IMAGE_PATH = '/images/henry-adagala-social-card.png';
+const SOCIAL_IMAGE_PATH = '/images/henry-adagala-social-card-v2.jpg';
 
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '');
 
@@ -71,7 +71,7 @@ export default function Seo({
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:alt" content={imageAlt} />
       {profile ? <meta property="profile:first_name" content="Henry" /> : null}
       {profile ? <meta property="profile:last_name" content="Adagala" /> : null}
