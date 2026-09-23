@@ -125,10 +125,10 @@ const contacts = [
 
 const menuSections = [
   { id: 'about', label: 'about' },
-  { id: 'projects', label: 'projects' },
-  { id: 'sites', label: 'sites' },
-  { id: 'skills', label: 'skills' },
   { id: 'contact', label: 'contact' },
+  { id: 'sites', label: 'sites' },
+  { id: 'projects', label: 'projects' },
+  { id: 'skills', label: 'skills' },
 ];
 
 const menuItemDelays = [
