@@ -22,5 +22,8 @@ describe('Kaswanga Green Project website proposal', () => {
     expect(
       screen.getByText('Recommended website features.'),
     ).toBeInTheDocument();
+    expect(screen.getByText('KES 30,000.00')).toBeInTheDocument();
+    expect(screen.getByText('Website and email hosting')).toBeInTheDocument();
+    expect(screen.getByText('KES 5,000.00')).toBeInTheDocument();
   });
 });

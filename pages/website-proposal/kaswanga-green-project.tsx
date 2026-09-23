@@ -14,6 +14,7 @@ const toc = [
   ['visual-direction', 'Visual direction'],
   ['features', 'Website features'],
   ['development', 'Development approach'],
+  ['investment', 'Investment'],
 ];
 
 const audience = [
@@ -387,6 +388,65 @@ const phases = [
       'Introduce donation or sponsorship tools when ready',
       'Continue improving search visibility and public engagement',
     ],
+  ],
+];
+
+const pricing = [
+  {
+    label: 'Website design and development',
+    amount: 'KES 30,000.00',
+    billing: 'One-time fee',
+    items: [
+      'Design and build of the pages outlined in this proposal',
+      'Forms and recommended website features',
+      'Mobile-responsive layouts',
+      'Content set-up, testing, and launch',
+    ],
+  },
+  {
+    label: 'Website and email hosting',
+    amount: 'KES 5,000.00',
+    billing: 'Per year',
+    items: [
+      'Hosting for the website',
+      'Email hosting for organization email accounts',
+      'Secure website connection',
+      'Renewed annually to keep the website and email running',
+    ],
+  },
+];
+
+const domainOptions = [
+  {
+    domain: 'kaswangagreen.or.ke',
+    tag: 'Recommended',
+    note: 'The Kenyan domain for non-profit organizations.',
+  },
+  {
+    domain: 'kaswangagreen.org',
+    tag: 'Alternative',
+    note: 'A widely recognized international domain for organizations.',
+  },
+  {
+    domain: 'kaswangagreenproject.org',
+    tag: 'Alternative',
+    note: 'Matches the full organization name, but is longer to type and produces longer email addresses.',
+  },
+];
+
+const emailAccounts = [
+  ['info@kaswangagreen.or.ke', 'General enquiries from the public'],
+  [
+    'volunteer@kaswangagreen.or.ke',
+    'Volunteer registrations and event sign-ups',
+  ],
+  [
+    'partnerships@kaswangagreen.or.ke',
+    'Sponsors, donors, and institutional partners',
+  ],
+  [
+    'director@kaswangagreen.or.ke',
+    'Individual accounts for directors or staff',
   ],
 ];
 
@@ -926,6 +986,105 @@ const WebsiteProposal: NextPage = () => {
                     </article>
                   ))}
                 </div>
+              </Section>
+
+              <Section
+                id="investment"
+                eyebrow="11 / Investment"
+                title="Development rate and hosting."
+              >
+                <p className="max-w-3xl text-lg leading-relaxed text-[#29463b]/80">
+                  A one-time fee covers designing and building the website.
+                  Hosting for the website and email is billed separately each
+                  year.
+                </p>
+                <div className="mt-10 grid border-t border-[#173d2e]/15 sm:grid-cols-2">
+                  {pricing.map((plan) => (
+                    <article
+                      key={plan.label}
+                      className="border-b border-[#173d2e]/15 py-8 sm:pr-9"
+                    >
+                      <span className="font-mono text-xs text-[#607c67]">
+                        {plan.billing}
+                      </span>
+                      <h3 className="mt-4 font-serif text-2xl">{plan.label}</h3>
+                      <p className="proposal-accent mt-3 font-mono text-2xl font-bold text-[#718d27]">
+                        {plan.amount}
+                      </p>
+                      <div className="mt-6">
+                        <BulletList items={plan.items} />
+                      </div>
+                    </article>
+                  ))}
+                </div>
+                <div className="mt-12">
+                  <h3 className="font-serif text-2xl">
+                    Suggested domain names
+                  </h3>
+                  <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-[#29463b]/80">
+                    The domain is the organization’s web address and the ending
+                    of its email addresses. The final choice will be confirmed
+                    with the organization and registered before launch.
+                  </p>
+                  <div className="mt-6 grid border-t border-[#173d2e]/15 sm:grid-cols-3">
+                    {domainOptions.map((option) => (
+                      <article
+                        key={option.domain}
+                        className="border-b border-[#173d2e]/15 py-6 sm:pr-6"
+                      >
+                        <span className="font-mono text-[10px] uppercase tracking-[.16em] text-[#607c67]">
+                          {option.tag}
+                        </span>
+                        <p className="proposal-accent mt-3 break-all font-mono text-base font-bold text-[#718d27]">
+                          {option.domain}
+                        </p>
+                        <p className="mt-3 text-sm leading-relaxed text-[#29463b]/80">
+                          {option.note}
+                        </p>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-12">
+                  <h3 className="font-serif text-2xl">
+                    Email hosting accounts
+                  </h3>
+                  <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-[#29463b]/80">
+                    Email hosting gives the organization professional email
+                    addresses on its own domain instead of personal Gmail or
+                    Yahoo accounts. This builds trust with partners and donors,
+                    and keeps messages sorted by purpose. For example:
+                  </p>
+                  <dl className="mt-6 grid border-t border-[#173d2e]/15">
+                    {emailAccounts.map(([address, purpose]) => (
+                      <div
+                        key={address}
+                        className="flex flex-col gap-1 border-b border-[#173d2e]/15 py-4 sm:flex-row sm:justify-between sm:gap-6"
+                      >
+                        <dt className="break-all font-mono text-sm font-bold">
+                          {address}
+                        </dt>
+                        <dd className="text-sm text-[#29463b]/80 sm:text-right">
+                          {purpose}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+
+                <dl className="mt-8 grid gap-3 text-sm">
+                  <div className="flex justify-between gap-6">
+                    <dt className="text-[#173d2e]/60">First-year total</dt>
+                    <dd className="text-right font-bold">KES 35,000.00</dd>
+                  </div>
+                  <div className="flex justify-between gap-6">
+                    <dt className="text-[#173d2e]/60">Each following year</dt>
+                    <dd className="text-right font-bold">
+                      KES 5,000.00 (hosting renewal)
+                    </dd>
+                  </div>
+                </dl>
               </Section>
 
               <section className="mb-16 border-y border-gray-800 py-10 sm:py-14">
