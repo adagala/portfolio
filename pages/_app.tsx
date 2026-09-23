@@ -1,8 +1,18 @@
-import '../styles/globals.css'
-import { AppProps } from 'next/app'
+// @ts-expect-error CSS imports are handled by Next.js at build time.
+import '../styles/globals.css';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
 
 function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default App
+export default App;

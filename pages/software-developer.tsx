@@ -5,19 +5,16 @@ import {
 } from '@heroicons/react/24/outline';
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import Head from 'next/head';
+import Seo from '../components/Seo';
 
 const SoftwareDeveloper: NextPage = () => {
   return (
     <div>
-      <Head>
-        <title>Software Developer Advert</title>
-        <meta
-          name="description"
-          content="Software Developer, Performance Management, Human Resource Management, Job Advert, Angular, Firebase"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Seo
+        title="Software Developer Advert"
+        description="Software developer job advert covering performance management, human resource management, Angular and Firebase."
+        path="/software-developer"
+      />
 
       <div className="flex justify-center m-5">
         <div className="absolute flex justify-center items-center h-full">
@@ -114,7 +111,7 @@ const SoftwareDeveloper: NextPage = () => {
                 <a href="mailto:adagalahenry@gmail.com">
                   <div className="flex items-center hover:opacity-50">
                     <EnvelopeIcon
-                      className="flex-shrink-0 h-5 w-5"
+                      className="shrink-0 h-5 w-5"
                       aria-hidden="true"
                     ></EnvelopeIcon>
                     <span className="ml-2">adagalahenry@gmail.com</span>
@@ -127,7 +124,7 @@ const SoftwareDeveloper: NextPage = () => {
                     className="flex items-center hover:opacity-50"
                   >
                     <ChatBubbleLeftRightIcon
-                      className="flex-shrink-0 h-5 w-5"
+                      className="shrink-0 h-5 w-5"
                       aria-hidden="true"
                     ></ChatBubbleLeftRightIcon>
                     <span className="ml-2">
@@ -145,7 +142,7 @@ const SoftwareDeveloper: NextPage = () => {
                 className="flex items-center cursor-pointer justify-center mt-4 hover:opacity-50"
               >
                 <ChevronLeftIcon
-                  className="flex-shrink-0 h-5 w-5"
+                  className="shrink-0 h-5 w-5"
                   aria-hidden="true"
                 ></ChevronLeftIcon>
                 <span className="ml-2">Back Home</span>

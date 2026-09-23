@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Seo from '../../components/Seo';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 
@@ -287,10 +287,11 @@ const Section = ({ id, eyebrow, title, children }: { id: string; eyebrow: string
 const WebsiteProposal: NextPage = () => {
   return (
     <div id="proposal-terminal" className="min-h-screen bg-black px-3 py-4 font-mono text-gray-300 selection:bg-green-400 selection:text-black sm:px-5 sm:py-8">
-      <Head>
-        <title>Website Proposal — Kaswanga Green Project</title>
-        <meta name="description" content="Website content and structure proposal for Kaswanga Green Project." />
-      </Head>
+      <Seo
+        title="Website Proposal — Kaswanga Green Project"
+        description="Website content and structure proposal for Kaswanga Green Project."
+        path="/website-proposal/kaswanga-green-project"
+      />
 
       <div className="mx-auto max-w-6xl overflow-hidden rounded-xl border border-gray-800 bg-gray-950 shadow-2xl">
       <header className="sticky top-0 z-40 border-b border-gray-800 bg-gray-900/95 backdrop-blur-xl">

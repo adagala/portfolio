@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import Seo from '../../components/Seo';
 import Link from 'next/link';
 
 const initiatives = [
@@ -61,13 +61,11 @@ const SproutMark = ({ className = '' }: { className?: string }) => (
 const KaswangaGreenProject: NextPage = () => {
   return (
     <div className="min-h-screen bg-[#f1efdf] text-[#153a2e] selection:bg-[#d9ff63] selection:text-[#153a2e]">
-      <Head>
-        <title>Kaswanga Green Project — Henry Adagala</title>
-        <meta
-          name="description"
-          content="Brand and website direction for Kaswanga Green Project, an environmental organisation focused on tree planting and community greening."
-        />
-      </Head>
+      <Seo
+        title="Kaswanga Green Project"
+        description="Brand and website direction for Kaswanga Green Project, an environmental organisation focused on tree planting and community greening."
+        path="/projects/kaswanga-green-project"
+      />
 
       <header className="sticky top-0 z-40 border-b border-[#153a2e]/15 bg-[#f1efdf]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12">

@@ -1,6 +1,6 @@
-import Head from 'next/head';
 import type { NextPage } from 'next';
 import { useEffect, useRef, useState } from 'react';
+import Seo from '../components/Seo';
 
 const projects = [
   {
@@ -230,14 +230,7 @@ const CommandHeading = ({ id, command }: { id: string; command: string }) => (
 const Home: NextPage = () => {
   return (
     <div>
-      <Head>
-        <title>Henry Adagala</title>
-        <meta
-          name="description"
-          content="Henry Adagala — full-stack software developer in Nairobi, Kenya, working with TypeScript, React and Next.js."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Seo profile />
 
       <main className="min-h-screen bg-black flex items-center justify-center px-4 py-10 sm:py-16">
         <div className="w-full max-w-2xl lg:max-w-5xl xl:max-w-6xl rounded-xl border border-gray-800 bg-gray-950 shadow-2xl overflow-hidden font-mono">
