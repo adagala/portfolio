@@ -28,28 +28,15 @@ const roadmap = [
 ];
 
 const ArrowUpRight = ({ className = '' }: { className?: string }) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    aria-hidden="true"
-    className={className}
-  >
+  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className={className}>
     <path d="M7 17 17 7M8 7h9v9" stroke="currentColor" strokeWidth="1.8" />
   </svg>
 );
 
 const SproutMark = ({ className = '' }: { className?: string }) => (
-  <svg
-    viewBox="0 0 64 64"
-    fill="none"
-    aria-hidden="true"
-    className={className}
-  >
+  <svg viewBox="0 0 64 64" fill="none" aria-hidden="true" className={className}>
     <path d="M32 56V29" stroke="currentColor" strokeWidth="3" />
-    <path
-      d="M32 31C18 30 10 21 9 9c13-1 23 5 23 22Z"
-      fill="currentColor"
-    />
+    <path d="M32 31C18 30 10 21 9 9c13-1 23 5 23 22Z" fill="currentColor" />
     <path
       d="M33 39c1-14 9-23 22-24 1 13-7 23-22 24Z"
       fill="currentColor"
@@ -68,7 +55,7 @@ const KaswangaGreenProject: NextPage = () => {
       />
 
       <header className="sticky top-0 z-40 border-b border-[#153a2e]/15 bg-[#f1efdf]/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
+        <div className="mx-auto flex max-w-360 items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
           <Link
             href="/"
             className="group inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em]"
@@ -94,7 +81,7 @@ const KaswangaGreenProject: NextPage = () => {
                 'repeating-radial-gradient(ellipse at 82% 38%, transparent 0 34px, #153a2e 35px 36px, transparent 37px 58px)',
             }}
           />
-          <div className="mx-auto grid min-h-[calc(100vh-65px)] max-w-[1440px] px-5 sm:px-8 lg:grid-cols-[1.25fr_.75fr] lg:px-12">
+          <div className="mx-auto grid min-h-[calc(100vh-65px)] max-w-360 px-5 sm:px-8 lg:grid-cols-[1.25fr_.75fr] lg:px-12">
             <div className="flex flex-col justify-between py-12 sm:py-16 lg:border-r lg:border-[#153a2e]/15 lg:py-20 lg:pr-12">
               <div className="flex items-center gap-3">
                 <span className="rounded-full bg-[#153a2e] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#f1efdf]">
@@ -111,15 +98,16 @@ const KaswangaGreenProject: NextPage = () => {
                 </p>
                 <h1 className="max-w-5xl font-serif text-[clamp(4rem,10vw,9.5rem)] leading-[0.78] tracking-[-0.075em]">
                   Kaswanga{' '}
-                  <span className="block italic text-[#337c5c]">Green</span>
-                  {' '}Project
+                  <span className="block italic text-[#337c5c]">Green</span>{' '}
+                  Project
                 </h1>
               </div>
 
               <div className="grid gap-8 border-t border-[#153a2e]/20 pt-6 sm:grid-cols-[1fr_auto] sm:items-end">
                 <p className="max-w-lg text-base leading-relaxed text-[#153a2e]/75 sm:text-lg">
                   A credible, community-first digital identity for an emerging
-                  environmental organisation—designed to grow as its impact does.
+                  environmental organisation—designed to grow as its impact
+                  does.
                 </p>
                 <a
                   href="#case-study"
@@ -156,7 +144,7 @@ const KaswangaGreenProject: NextPage = () => {
         </section>
 
         <section id="case-study" className="bg-[#153a2e] text-[#f1efdf]">
-          <div className="mx-auto grid max-w-[1440px] gap-14 px-5 py-24 sm:px-8 lg:grid-cols-[.65fr_1.35fr] lg:px-12 lg:py-32">
+          <div className="mx-auto grid max-w-360 gap-14 px-5 py-24 sm:px-8 lg:grid-cols-[.65fr_1.35fr] lg:px-12 lg:py-32">
             <div>
               <p className="sticky top-28 font-mono text-xs uppercase tracking-[0.22em] text-[#d9ff63]">
                 01 / The opportunity
@@ -184,7 +172,7 @@ const KaswangaGreenProject: NextPage = () => {
         </section>
 
         <section className="border-b border-[#153a2e]/15 bg-[#f7f5e9]">
-          <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+          <div className="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
             <div className="grid gap-8 lg:grid-cols-[.65fr_1.35fr]">
               <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#337c5c]">
                 02 / Design direction
@@ -192,7 +180,8 @@ const KaswangaGreenProject: NextPage = () => {
               <div>
                 <h2 className="font-serif text-5xl leading-none tracking-[-0.045em] sm:text-7xl">
                   Rooted. Hopeful.
-                  <br />Built to be trusted.
+                  <br />
+                  Built to be trusted.
                 </h2>
                 <p className="mt-8 max-w-2xl text-lg leading-relaxed text-[#153a2e]/70">
                   The identity balances the authority expected by partners with
@@ -202,22 +191,30 @@ const KaswangaGreenProject: NextPage = () => {
               </div>
             </div>
 
-            <div className="mt-20 grid min-h-[390px] gap-3 md:grid-cols-12">
-              <div className="flex flex-col justify-between rounded-[2rem] bg-[#153a2e] p-7 text-[#f1efdf] md:col-span-5">
-                <span className="font-mono text-xs uppercase tracking-[0.2em]">Forest / #153A2E</span>
+            <div className="mt-20 grid min-h-97.5 gap-3 md:grid-cols-12">
+              <div className="flex flex-col justify-between rounded-4xl bg-[#153a2e] p-7 text-[#f1efdf] md:col-span-5">
+                <span className="font-mono text-xs uppercase tracking-[0.2em]">
+                  Forest / #153A2E
+                </span>
                 <SproutMark className="h-24 w-24 text-[#d9ff63]" />
               </div>
-              <div className="flex flex-col justify-between rounded-[2rem] bg-[#d9ff63] p-7 md:col-span-3">
-                <span className="font-mono text-xs uppercase tracking-[0.2em]">New growth</span>
-                <span className="font-serif text-6xl tracking-[-0.06em]">Aa</span>
+              <div className="flex flex-col justify-between rounded-4xl bg-[#d9ff63] p-7 md:col-span-3">
+                <span className="font-mono text-xs uppercase tracking-[0.2em]">
+                  New growth
+                </span>
+                <span className="font-serif text-6xl tracking-[-0.06em]">
+                  Aa
+                </span>
               </div>
               <div className="grid gap-3 md:col-span-4">
-                <div className="flex items-end justify-between rounded-[2rem] bg-[#e46d3f] p-7 text-[#f7f5e9]">
-                  <span className="font-mono text-xs uppercase tracking-[0.2em]">Earth</span>
+                <div className="flex items-end justify-between rounded-4xl bg-[#e46d3f] p-7 text-[#f7f5e9]">
+                  <span className="font-mono text-xs uppercase tracking-[0.2em]">
+                    Earth
+                  </span>
                   <span className="text-4xl">●</span>
                 </div>
-                <div className="flex items-end rounded-[2rem] border border-[#153a2e]/20 bg-[#f1efdf] p-7">
-                  <p className="max-w-[14rem] font-serif text-3xl italic leading-tight">
+                <div className="flex items-end rounded-4xl border border-[#153a2e]/20 bg-[#f1efdf] p-7">
+                  <p className="max-w-56 font-serif text-3xl italic leading-tight">
                     Growth is a long-term commitment.
                   </p>
                 </div>
@@ -227,7 +224,7 @@ const KaswangaGreenProject: NextPage = () => {
         </section>
 
         <section className="overflow-hidden bg-[#d9ff63]">
-          <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+          <div className="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
             <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#337c5c]">
@@ -243,16 +240,22 @@ const KaswangaGreenProject: NextPage = () => {
               </p>
             </div>
 
-            <div className="rounded-[2rem] bg-[#f7f5e9] p-3 shadow-[0_40px_100px_rgba(21,58,46,.2)] sm:p-5 lg:rounded-[3rem] lg:p-7">
-              <div className="overflow-hidden rounded-[1.3rem] border border-[#153a2e]/15 bg-[#f1efdf] lg:rounded-[2rem]">
+            <div className="rounded-4xl bg-[#f7f5e9] p-3 shadow-[0_40px_100px_rgba(21,58,46,.2)] sm:p-5 lg:rounded-[3rem] lg:p-7">
+              <div className="overflow-hidden rounded-[1.3rem] border border-[#153a2e]/15 bg-[#f1efdf] lg:rounded-4xl">
                 <div className="flex items-center justify-between border-b border-[#153a2e]/15 px-5 py-4 sm:px-8">
                   <div className="flex items-center gap-3 font-bold">
                     <SproutMark className="h-7 w-7" />
-                    <span className="text-xs uppercase tracking-[0.15em]">Kaswanga Green</span>
+                    <span className="text-xs uppercase tracking-[0.15em]">
+                      Kaswanga Green
+                    </span>
                   </div>
                   <div className="hidden items-center gap-8 text-[10px] font-bold uppercase tracking-[0.16em] sm:flex">
-                    <span>Our work</span><span>Impact</span><span>About</span>
-                    <span className="rounded-full bg-[#153a2e] px-5 py-3 text-[#f1efdf]">Get involved</span>
+                    <span>Our work</span>
+                    <span>Impact</span>
+                    <span>About</span>
+                    <span className="rounded-full bg-[#153a2e] px-5 py-3 text-[#f1efdf]">
+                      Get involved
+                    </span>
                   </div>
                 </div>
                 <div className="grid lg:grid-cols-[1.15fr_.85fr]">
@@ -272,10 +275,14 @@ const KaswangaGreenProject: NextPage = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="relative min-h-[420px] overflow-hidden bg-[#337c5c]">
+                  <div className="relative min-h-105 overflow-hidden bg-[#337c5c]">
                     <div
                       className="absolute inset-0 opacity-25"
-                      style={{ backgroundImage: 'radial-gradient(#d9ff63 1px, transparent 1px)', backgroundSize: '18px 18px' }}
+                      style={{
+                        backgroundImage:
+                          'radial-gradient(#d9ff63 1px, transparent 1px)',
+                        backgroundSize: '18px 18px',
+                      }}
                     />
                     <div className="absolute inset-0 grid place-items-center">
                       <div className="relative grid h-64 w-64 place-items-center rounded-full border border-[#d9ff63]/45">
@@ -283,7 +290,7 @@ const KaswangaGreenProject: NextPage = () => {
                         <SproutMark className="h-40 w-40 text-[#d9ff63]" />
                       </div>
                     </div>
-                    <p className="absolute bottom-7 left-7 max-w-[13rem] text-xs leading-relaxed text-[#f1efdf]/75">
+                    <p className="absolute bottom-7 left-7 max-w-52 text-xs leading-relaxed text-[#f1efdf]/75">
                       Planting is the beginning. Stewardship makes it last.
                     </p>
                   </div>
@@ -294,7 +301,7 @@ const KaswangaGreenProject: NextPage = () => {
         </section>
 
         <section className="bg-[#f7f5e9]">
-          <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
+          <div className="mx-auto max-w-360 px-5 py-24 sm:px-8 lg:px-12 lg:py-32">
             <div className="grid gap-14 lg:grid-cols-[.65fr_1.35fr]">
               <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#337c5c]">
                 04 / Content system
@@ -309,9 +316,15 @@ const KaswangaGreenProject: NextPage = () => {
                       key={initiative.number}
                       className="grid gap-5 border-b border-[#153a2e]/20 py-8 sm:grid-cols-[80px_1fr_1fr] sm:items-start"
                     >
-                      <span className="font-mono text-xs text-[#337c5c]">{initiative.number}</span>
-                      <h3 className="font-serif text-3xl tracking-[-0.035em]">{initiative.title}</h3>
-                      <p className="text-sm leading-relaxed text-[#153a2e]/65">{initiative.body}</p>
+                      <span className="font-mono text-xs text-[#337c5c]">
+                        {initiative.number}
+                      </span>
+                      <h3 className="font-serif text-3xl tracking-[-0.035em]">
+                        {initiative.title}
+                      </h3>
+                      <p className="text-sm leading-relaxed text-[#153a2e]/65">
+                        {initiative.body}
+                      </p>
                     </article>
                   ))}
                 </div>
@@ -321,7 +334,7 @@ const KaswangaGreenProject: NextPage = () => {
         </section>
 
         <section className="border-y border-[#f1efdf]/15 bg-[#153a2e] text-[#f1efdf]">
-          <div className="mx-auto grid max-w-[1440px] lg:grid-cols-2">
+          <div className="mx-auto grid max-w-360 lg:grid-cols-2">
             <div className="border-b border-[#f1efdf]/15 px-5 py-20 sm:px-8 lg:border-b-0 lg:border-r lg:px-12 lg:py-28">
               <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#d9ff63]">
                 Built for responsible growth
@@ -338,8 +351,13 @@ const KaswangaGreenProject: NextPage = () => {
               </p>
               <ol className="mt-12">
                 {roadmap.map((item, index) => (
-                  <li key={item} className="flex items-center gap-5 border-t border-[#f1efdf]/15 py-5 text-sm">
-                    <span className="font-mono text-xs text-[#d9ff63]">0{index + 1}</span>
+                  <li
+                    key={item}
+                    className="flex items-center gap-5 border-t border-[#f1efdf]/15 py-5 text-sm"
+                  >
+                    <span className="font-mono text-xs text-[#d9ff63]">
+                      0{index + 1}
+                    </span>
                     {item}
                   </li>
                 ))}
@@ -349,8 +367,10 @@ const KaswangaGreenProject: NextPage = () => {
         </section>
 
         <section className="bg-[#e46d3f] text-[#153a2e]">
-          <div className="mx-auto max-w-[1440px] px-5 py-24 text-center sm:px-8 lg:px-12 lg:py-32">
-          <p className="font-mono text-xs uppercase tracking-[0.24em]">Project outcome</p>
+          <div className="mx-auto max-w-360 px-5 py-24 text-center sm:px-8 lg:px-12 lg:py-32">
+            <p className="font-mono text-xs uppercase tracking-[0.24em]">
+              Project outcome
+            </p>
             <h2 className="mx-auto mt-8 max-w-5xl font-serif text-5xl leading-[.94] tracking-[-0.05em] sm:text-7xl lg:text-8xl">
               A flexible foundation for an organisation ready to grow.
             </h2>

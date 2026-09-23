@@ -16,13 +16,11 @@ describe('Kaswanga Green Project case study', () => {
       screen.getByRole('heading', { name: 'Kaswanga Green Project' }),
     ).toBeInTheDocument();
     expect(screen.getByText('Plant & restore')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Back to all work' })).toHaveAttribute(
-      'href',
-      '/',
-    );
-    expect(screen.getByRole('link', { name: 'Read website proposal' })).toHaveAttribute(
-      'href',
-      '/website-proposal/kaswanga-green-project',
-    );
+    expect(
+      screen.getByRole('link', { name: 'Back to all work' }),
+    ).toHaveAttribute('href', '/');
+    expect(
+      screen.getByRole('link', { name: 'Read website proposal' }),
+    ).toHaveAttribute('href', '/website-proposal/kaswanga-green-project');
   });
 });
