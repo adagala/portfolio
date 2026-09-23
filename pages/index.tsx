@@ -8,38 +8,45 @@ const projects = [
     description:
       'Online membership and resource platform for health informatics professionals in Kenya.',
     href: 'https://kehia.org',
+    external: true,
   },
   {
     name: 'The MidBar Welfare Association (TMBWA)',
     description:
       'Member portal and mutual-support community for the MidBar Welfare Association.',
     href: 'https://app.themidbarwelfareassociation.co.ke',
+    external: true,
   },
   {
     name: 'RemoteMore Marketplace',
     description: 'Marketplace connecting remote tech talent with companies.',
     href: 'https://app.remotemore.com',
+    external: true,
   },
   {
     name: 'Onima Media',
     description:
       'Music distribution and publishing platform for independent artists and labels.',
     href: 'https://dashboard.onima.co',
+    external: true,
   },
   {
     name: 'acelr8',
     description: 'Startup human resource management platform.',
     href: '#',
+    external: false,
   },
   {
     name: 'Smart Apartment Data',
     description: 'Property management platform.',
     href: 'https://smartapartmentdata.com/',
+    external: true,
   },
   {
     name: 'Delsco Kenya',
     description: 'Human Resource management platform.',
     href: '#',
+    external: false,
   },
 ];
 
@@ -326,8 +333,8 @@ const Home: NextPage = () => {
                   <li key={project.name} className="mb-4 last:mb-0">
                     <a
                       href={project.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target={project.external ? '_blank' : undefined}
+                      rel={project.external ? 'noopener noreferrer' : undefined}
                       className="text-sm font-bold text-blue-400 hover:text-blue-300"
                     >
                       <span className="text-green-400">▸ </span>
