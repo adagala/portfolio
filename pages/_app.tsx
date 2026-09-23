@@ -1,4 +1,3 @@
-// @ts-expect-error CSS imports are handled by Next.js at build time.
 import '../styles/globals.css';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
